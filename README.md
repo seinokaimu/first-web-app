@@ -1,24 +1,15 @@
-# README
+# CRUDアプリケーション（Q＆Aサイト）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## どんなアプリ？
+- 質問を投稿ができる
+- 質問の編集ができる
+- 質問を消去できる
+- 質問に回答できる
+- 質問一覧を確認できる
+- 回答を編集できる
+- 回答の削除ができる
+- 回答一覧を表示できる
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- Ruby version 3.0.2
+- IDE Cloud9
