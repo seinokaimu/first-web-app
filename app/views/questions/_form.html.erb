@@ -1,6 +1,6 @@
-<%= form_with model: @question do |form| %>
+<%= form_with model: @question, html: { class: 'mb-5' } do |form| %>
   <% if @question.errors.any? %>
-    <div>
+    <div class="alert alert-danger">
       <ul>
         <% @question.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -8,19 +8,47 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :content %>
+    <%= form.text_area  :content, class: 'form-control' %>
+  </div>
   <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </div>
-    <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </div>
-    <div>
-    <%= form.label :content %><br>
-    <%= form.text_area  :content %>
-  </div>
-  <div>
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+
+<!--<%= form_with model: @question do |form| %>-->
+<!--  <% if @question.errors.any? %>-->
+<!--    <div>-->
+<!--      <ul>-->
+<!--        <% @question.errors.full_messages.each do |message| %>-->
+<!--          <li><%= message %></li>-->
+<!--        <% end %>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  <% end %>-->
+<!--  <div>-->
+<!--    <%= form.label :title %><br>-->
+<!--    <%= form.text_field :title %>-->
+<!--  </div>-->
+<!--    <div>-->
+<!--    <%= form.label :name %><br>-->
+<!--    <%= form.text_field :name %>-->
+<!--  </div>-->
+<!--    <div>-->
+<!--    <%= form.label :content %><br>-->
+<!--    <%= form.text_area  :content %>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <%= form.submit %>-->
+<!--  </div>-->
+<!--<% end %>-->
